@@ -1,0 +1,19 @@
+{
+  "name": "Basic_scene",
+  "version": "0.0.0",
+  "authors": [
+    "Corey Flynn <flynn.corey@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "barista": "git@github.com:cmap/barista.git#gh-pages"
+  }
+}
