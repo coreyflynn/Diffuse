@@ -1,9 +1,24 @@
 {
-  "name": "PCL Embedding",
+  "name": "Diffuse",
+  "version": "0.0.0",
+  "description": "Diffuse =======",
   "main": "index.html",
-  "window": {
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "window":{
     "toolbar": false,
-    "width": 1200,
-    "height": 800
-  }
+    "height": 800,
+    "width": 1200
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coreyflynn/Diffuse.git"
+  },
+  "author": "Corey Flynn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coreyflynn/Diffuse/issues"
+  },
+  "homepage": "https://github.com/coreyflynn/Diffuse"
 }

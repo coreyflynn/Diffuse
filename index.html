@@ -51,6 +51,9 @@
 <!-- ------ -->
 <body>
 
+    <!-- open dialog -->
+    <input id="open" type="file" style="display:none" accept="*.json"/>
+
     <div id="pointInfo">
         <h4 class="col-xs-offset-1 col-xs-1 overlayText">Signature:</h4>
         <h4 id="drugLabel" class="col-xs-10 overlayText">None Selected</h4>
@@ -197,6 +200,23 @@
         // Once the scene is loaded, just register a render loop to render it
         engine.runRenderLoop(function () {
             scene.render();
+        });
+
+        // handle open dialog
+        function clickInput(id) {
+            var event = document.createEvent('MouseEvents');
+            event.initMouseEvent('click');
+            document.getElementById(id).dispatchEvent(event);
+        }
+
+        document.addEventListener('keyup', function (e) {
+            if (e.keyCode == 'O'.charCodeAt(0) && e.ctrlKey) {
+                clickInput('open');
+            }
+        });
+
+        document.getElementById('open').addEventListener('change', function (e) {
+            get_data(this.value);
         });
 
     </script>

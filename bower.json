@@ -13,7 +13,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.1",
     "barista": "git@github.com:cmap/barista.git#gh-pages"
   }
 }
