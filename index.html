@@ -75,6 +75,8 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
         var fs = require('fs');
+        var gui = require('nw.gui');
+
         // Get the Canvas element from our HTML below
         var canvas = document.getElementById("renderCanvas");
 
@@ -202,7 +204,7 @@
             scene.render();
         });
 
-        // handle open dialog
+        // handle open dialog and new window requests
         function clickInput(id) {
             var event = document.createEvent('MouseEvents');
             event.initMouseEvent('click');
@@ -212,6 +214,12 @@
         document.addEventListener('keyup', function (e) {
             if (e.keyCode == 'O'.charCodeAt(0) && e.ctrlKey) {
                 clickInput('open');
+            } else if (e.keyCode == 'N'.charCodeAt(0) && e.ctrlKey) {
+                gui.Window.open('index.html',{
+                  "toolbar": false,
+                  "height": 800,
+                  "width": 1200
+                });
             }
         });
 
